@@ -74,7 +74,6 @@ int main() {
     //Wait for enthusiasts(Suppliers run forever)
     for(int i = 0; i < ENTHUSIASTS; i++) {
         pthread_join(enjoyersT[i], NULL);
-        printf("\033[0;92m Enthusiast %d is done. \033[0m\n", i);
     }
   
     return 0;
@@ -134,6 +133,7 @@ void *enthusiasts(void* arg) {
         usleep(rand() % 5000);
     }
 
+    printf("\033[0;92m Enthusiast %d is done \033[0m\n", id);
     return NULL;
 }
 
