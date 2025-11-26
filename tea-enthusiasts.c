@@ -83,7 +83,7 @@ int main() {
 void *enthusiasts(void* arg) {
     int id = *((int*) arg);
     free(arg);
-    int recipes = (rand() % 15) + 1;
+    int recipes = (rand() % 11) + 15; // 25-15
     for(int x = 0; x < recipes; x++) {
         int recSize = (rand() % 3) + 2;
         char* recipe[recSize]; //Array of recipe strings
