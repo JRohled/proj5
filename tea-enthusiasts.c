@@ -146,7 +146,7 @@ void *supplier(void *arg) {
         // - Increasing available pouches
         pthread_mutex_lock(&tableLock);
         if(table[id] == 0) {
-            for(int i = 1; i < addPouches; i++) {
+            for(int i = 0; i < addPouches; i++) {
                 sem_post(&supplierSems[id]);
                 table[id]++;
             }
